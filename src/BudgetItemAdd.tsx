@@ -66,6 +66,7 @@ export const BudgetItemAdd = ({ label, onNewLine }: BudgetItemProps) => {
           </div>
 
           <button type="submit">Add Item</button>
+          <button onClick={() => setAddingLine(false)}>Cancel</button>
         </form>
       ) : (
         <div className="footer line">

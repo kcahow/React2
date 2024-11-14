@@ -1,31 +1,22 @@
-import { useEffect, useReducer } from 'react';
+import { useEffect, useReducer } from "react";
+import { BudgetItemType, BudgetLineType, getBudget } from "./api";
+import { BudgetItem } from "./BudgetItem";
+import { BudgetSummary } from "./BudgetSummary";
+import { mainReducer } from "./mainReducer";
 
-import {
-  BudgetItemType,
-  BudgetLineType,
-  getBudget,
-} from './api';
-
-import { BudgetItem } from './BudgetItem';
-import { BudgetSummary } from './BudgetSummary';
-
-import { mainReducer } from './mainReducer';
-
-function Budget({ monthIndex }) {
+function Budget({ monthIndex }: { monthIndex: number }) {
   const [state, dispatch] = useReducer(mainReducer, {});
 
   useEffect(() => {
     (async function main() {
       const data = await getBudget(monthIndex);
-      dispatch({ type: 'setState', payload: data });
+      console.log("AND THE data", data);
+      dispatch({ type: "setState", payload: data });
     })();
   }, [monthIndex]);
 
-  const addNewLine = (
-    label: BudgetItemType,
-    newLine: BudgetLineType,
-  ) => {
-    dispatch({ type: 'addBudgetLine', label, payload: newLine });
+  const addNewLine = (label: BudgetItemType, newLine: BudgetLineType) => {
+    dispatch({ type: "addBudgetLine", label, payload: newLine });
   };
 
   return (
@@ -33,7 +24,7 @@ function Budget({ monthIndex }) {
       {Object.keys(state).map((label) => (
         <BudgetItem
           key={label}
-          label={label}
+          label={label as BudgetItemType}
           lines={state[label] ?? []}
           onNewLine={addNewLine}
         />

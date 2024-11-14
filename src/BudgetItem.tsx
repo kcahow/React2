@@ -1,4 +1,3 @@
-import { SyntheticEvent, useState } from "react";
 import type { BudgetItemType, BudgetLineType } from "./api";
 import { BudgetItemAdd } from "./BudgetItemAdd";
 
@@ -9,8 +8,6 @@ export type BudgetItemProps = {
 };
 
 const BudgetItem = ({ label, lines, onNewLine }: BudgetItemProps) => {
-  const [addingLine, setAddingLine] = useState(false);
-
   return (
     <div className="budget-item">
       <div className="header">

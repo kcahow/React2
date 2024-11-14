@@ -1,0 +1,41 @@
+#root {
+  padding: 2rem;
+}
+
+.app-header {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0.4em;
+}
+
+.budget {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  .budget-summary,
+  .budget-item {
+    min-width: 200px;
+    border: black 1px solid;
+    margin: 10px;
+    padding: 10px;
+    .header {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px dotted black;
+      padding-bottom: 10px;
+    }
+    .line {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .footer {
+      border-top: 1px dotted black;
+      margin-top: 10px;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+  }
+}

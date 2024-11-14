@@ -1,4 +1,5 @@
-import { BudgetItemDataType } from './api';
+import { useMemo } from "react";
+import { BudgetItemDataType } from "./api";
 
 type Props = {
   data: BudgetItemDataType;
@@ -26,7 +27,7 @@ const BudgetSummary = ({ data }: Props) => {
         );
       })}
       <div className="footer line">
-        <span>{totalSum}</span>
+        <span>{useMemo(() => totalSum, [totalSum])}</span>
       </div>
     </div>
   );

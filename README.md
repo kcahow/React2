@@ -12,7 +12,6 @@
 - Use Context instead of props for state and state actions
 
 - Start with empty data and save new data in localStorage. Refreshing the browser should keep anything entered.
-
 - Snapshot test all components
 
 

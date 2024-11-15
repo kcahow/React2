@@ -1,12 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Budget component snapshot 1`] = `
+<div
+  className="budget"
+>
+  <div
+    className="budget-summary"
+  >
+    <div
+      className="header"
+    >
+      <span>
+        SUMMARY
+      </span>
+      <span>
+        AMOUNT
+      </span>
+    </div>
+    <div
+      className="footer line"
+    >
+      <span>
+        0
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BudgetSummary component snapshot 1`] = `
+<div
+  className="budget-summary"
+>
+  <div
+    className="header"
+  >
+    <span>
+      SUMMARY
+    </span>
+    <span>
+      AMOUNT
+    </span>
+  </div>
+  <div
+    className="line"
+  >
+    <span>
+      INCOME
+    </span>
+    <span>
+      0
+    </span>
+  </div>
+  <div
+    className="line"
+  >
+    <span>
+      EXPENSES
+    </span>
+    <span>
+      0
+    </span>
+  </div>
+  <div
+    className="line"
+  >
+    <span>
+      DEBT
+    </span>
+    <span>
+      0
+    </span>
+  </div>
+  <div
+    className="footer line"
+  >
+    <span>
+      0
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Clock component snapshot 1`] = `
 <div>
   <div>
     Current Time
   </div>
   <p>
-    12:37:24 PM
+    2:00:44 PM
   </p>
 </div>
 `;

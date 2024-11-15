@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-import Budget from "./Budget";
+import { Budget } from "./Budget";
 import { Clock } from "./Clock";
 
 function App() {

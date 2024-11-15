@@ -4,7 +4,7 @@ import { BudgetItem } from "./BudgetItem";
 import { BudgetSummary } from "./BudgetSummary";
 import { mainReducer } from "./mainReducer";
 
-function Budget({ monthIndex }: { monthIndex: number }) {
+export function Budget({ monthIndex }: { monthIndex: number }) {
   const [state, dispatch] = useReducer(mainReducer, {});
 
   useEffect(() => {
@@ -33,5 +33,3 @@ function Budget({ monthIndex }: { monthIndex: number }) {
     </div>
   );
 }
-
-export default Budget;

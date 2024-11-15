@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clock component snapshot 1`] = `
+<div>
+  <div>
+    Current Time
+  </div>
+  <p>
+    12:37:24 PM
+  </p>
+</div>
+`;
